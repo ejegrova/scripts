@@ -8,10 +8,12 @@ for element_path in "${my_array[@]}"
     tar -zxf $element_path --one-top-level 
     element=$(echo $element_path | rev | cut -d '/' -f1 | rev | cut -d '.' -f1)
     cd $element/app
-    git gc
+    git gc --prune=now --quiet
     cd ../..
     tar -czf $element_path $element
     wc -c $element_path
+    rm -rf ${element}
+    echo
     #sleep 5
   done
 
