@@ -1,3 +1,8 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+
 sources_dir="/var/lib/cachito/sources/"
 cd $sources_dir
 
