@@ -7,7 +7,8 @@ sources_dir="/var/lib/cachito/sources/"
 cd $sources_dir
 
 my_array=( $(find . -type f -size +1G) )
-dest_dir="/tmp/"
+dest_dir="/tmp/cloudbld-3454/"
+mkdir $dest_dir
 
 for element_path in "${my_array[@]}"
   do
