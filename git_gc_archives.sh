@@ -6,7 +6,7 @@ IFS=$'\n\t'
 sources_dir="/var/lib/cachito/sources/"
 cd $sources_dir
 
-my_array=( $(find . -type f -size +1G) )
+my_array=( $(find . -type f -size +100M) )
 dest_dir="/tmp/cloudbld-3454/"
 mkdir $dest_dir
 
