@@ -10,6 +10,8 @@ my_array=( $(find . -type f -size +1G) )
 dest_dir="/tmp/cloudbld-3454/"
 mkdir $dest_dir
 
+echo "START"
+
 for element_path in "${my_array[@]}"
   do
     echo "Before: $(wc -c $element_path)"
@@ -30,3 +32,4 @@ for element_path in "${my_array[@]}"
     echo
   done
 
+echo "END"
